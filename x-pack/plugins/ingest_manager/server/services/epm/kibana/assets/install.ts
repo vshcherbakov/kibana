@@ -20,7 +20,9 @@ import {
 import { deleteKibanaSavedObjectsAssets } from '../../packages/remove';
 import { getInstallationObject, savedObjectTypes } from '../../packages';
 
-type SavedObjectToBe = Required<SavedObjectsBulkCreateObject> & { type: AssetType };
+type SavedObjectToBe = Required<Pick<SavedObjectsBulkCreateObject, keyof ArchiveAsset>> & {
+  type: AssetType;
+};
 export type ArchiveAsset = Pick<
   SavedObject,
   'id' | 'attributes' | 'migrationVersion' | 'references'
