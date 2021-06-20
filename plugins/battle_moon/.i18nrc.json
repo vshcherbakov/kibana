@@ -1,0 +1,7 @@
+{
+  "prefix": "battleMoon",
+  "paths": {
+    "battleMoon": "."
+  },
+  "translations": ["translations/ja-JP.json"]
+}
